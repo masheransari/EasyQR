@@ -1,0 +1,272 @@
+<!doctype html>
+<!--
+  privacy-policy.html — Easy QR: Scanner & Generator privacy policy.
+  Self-contained static page (no external CSS/JS) for public HTTPS hosting and for the
+  in-app viewer (bundled as an Android asset). Light/dark follow the system theme.
+  Text reflects the app's actual implementation (see CLAUDE.md). Items in [BRACKETS]
+  must be completed by the owner before publishing.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy – Easy QR: Scanner &amp; Generator</title>
+<meta name="description" content="How Easy QR: Scanner & Generator handles camera images, scanned content, local history and advertising data.">
+<style>
+  :root {
+    --bg: #F5F7FA; --surface: #FFFFFF; --surface-alt: #E9F0F7; --text: #14212D;
+    --secondary: #526371; --outline: #CFD9E2; --accent: #245ED8; --on-accent: #FFFFFF;
+    --note-bg: #FFF6DA; --note-border: #E3C46B;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B1118; --surface: #151F29; --surface-alt: #1B2934; --text: #F4F7F9;
+      --secondary: #A3B0B9; --outline: #33434E; --accent: #C7FA60; --on-accent: #0B1118;
+      --note-bg: #2A2A16; --note-border: #6B6327;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
+  header.brand {
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 8px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  header.brand svg { width: 48px; height: 48px; border-radius: 12px; flex: none; }
+  .wordmark { font-weight: 700; letter-spacing: .32em; font-size: 14px; }
+  .app { color: var(--secondary); font-size: 14px; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 20px 48px; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.4rem); line-height: 1.2; margin: 16px 0 6px; }
+  .meta { color: var(--secondary); margin: 0 0 24px; }
+  nav.toc, section {
+    background: var(--surface); border: 1px solid var(--outline); border-radius: 16px;
+    padding: 20px 22px; margin: 0 0 16px;
+  }
+  nav.toc h2 { margin-top: 0; }
+  nav.toc ol { margin: 0; padding-left: 1.3em; columns: 2 16rem; column-gap: 2rem; }
+  nav.toc li { break-inside: avoid; margin: 2px 0; }
+  h2 { font-size: 1.3rem; line-height: 1.3; margin: 0 0 10px; }
+  h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 1.3em; }
+  li { margin: 4px 0; }
+  .note {
+    background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 12px;
+    padding: 12px 14px; margin: 0 0 16px;
+  }
+  .pill { display: inline-block; background: var(--surface-alt); border-radius: 999px; padding: 1px 10px; font-size: .9em; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-top: 1px solid var(--outline); }
+  th { color: var(--secondary); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 20px 40px; color: var(--secondary); font-size: .9rem; }
+  @media (max-width: 480px) { nav.toc, section { padding: 16px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="brand">
+  <!-- Easy QR app icon (handoff/assets/graphics/app-icon.svg) -->
+  <svg viewBox="0 0 432 432" role="img" aria-label="Easy QR logo">
+    <rect width="432" height="432" fill="#0B1118"/>
+    <g fill="none" stroke="#C7FA60" stroke-width="28" stroke-linecap="round">
+      <path d="M110 182v-44q0-28 28-28h44 M250 110h44q28 0 28 28v44 M110 250v44q0 28 28 28h44 M250 322h44q28 0 28-28v-44"/>
+    </g>
+    <rect x="185" y="185" width="62" height="62" rx="16" fill="#C7FA60"/>
+  </svg>
+  <div>
+    <div class="wordmark">EASY QR</div>
+    <div class="app">Easy QR: Scanner &amp; Generator</div>
+  </div>
+</header>
+
+<main id="content">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: 28-Oct-2026</p>
+
+  <nav class="toc" aria-labelledby="toc-title">
+    <h2 id="toc-title">Contents</h2>
+    <ol>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#developer">Developer and contact</a></li>
+      <li><a href="#access">Information the app accesses</a></li>
+      <li><a href="#camera">Camera and scanning</a></li>
+      <li><a href="#gallery">Gallery images</a></li>
+      <li><a href="#history">Local history</a></li>
+      <li><a href="#wifi">Wi-Fi codes and passwords</a></li>
+      <li><a href="#exports">Generated codes and exported files</a></li>
+      <li><a href="#advertising">Advertising and Google AdMob</a></li>
+      <li><a href="#third-party">Third-party SDKs</a></li>
+      <li><a href="#consent">Consent and ad preferences</a></li>
+      <li><a href="#storage">Data storage and security</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#links">External links and services</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#effective">Effective date</a></li>
+    </ol>
+  </nav>
+
+  <section id="introduction" aria-labelledby="h-introduction">
+    <h2 id="h-introduction">1. Introduction</h2>
+    <p>This Privacy Policy explains how the Android app <strong>Easy QR: Scanner &amp; Generator</strong> ("Easy QR", "the app") handles information. Easy QR scans QR codes and barcodes, creates QR codes and barcodes, and keeps an optional history on your device.</p>
+    <p>Scanning and code creation are processed <strong>on your device</strong> and work without an internet connection. Easy QR has no user accounts and no servers of its own, and the developer does not receive the codes you scan or create or your history. The app does, however, contain Google software development kits (SDKs) for advertising and barcode recognition, which collect some information as described in sections <a href="#advertising">9</a> and <a href="#third-party">10</a>. Easy QR is therefore <em>not</em> a "no data collected" app.</p>
+  </section>
+
+  <section id="developer" aria-labelledby="h-developer">
+    <h2 id="h-developer">2. Application developer and contact information</h2>
+    <p>Easy QR is developed and published by <strong>Muhammad Asher Ansari</strong>, who is responsible for the app.</p>
+    <p>Privacy questions: <a href="mailto:asheransar@gmail.com">asheransar@gmail.com</a></p>
+  </section>
+
+  <section id="access" aria-labelledby="h-access">
+    <h2 id="h-access">3. Information the application accesses</h2>
+    <div class="table-wrap">
+    <table>
+      <caption class="skip">Information accessed by Easy QR</caption>
+      <thead><tr><th scope="col">What</th><th scope="col">When</th><th scope="col">Leaves your device?</th></tr></thead>
+      <tbody>
+        <tr><td>Camera image frames</td><td>Only while the Scan screen is open and you have allowed camera access</td><td>No (analysed on-device, not stored)</td></tr>
+        <tr><td>A photo you pick</td><td>Only when you tap "Scan from photo" and choose an image</td><td>No (analysed on-device, not stored)</td></tr>
+        <tr><td>Content of scanned or created codes</td><td>When you scan or create a code</td><td>No, unless you choose to open, copy, save or share it</td></tr>
+        <tr><td>History and settings</td><td>Saved locally as you use the app</td><td>No, except as part of Android device backups (see <a href="#storage">section 12</a>)</td></tr>
+        <tr><td>Advertising and diagnostic data</td><td>When ads are requested and shown</td><td>Yes, to Google (see <a href="#advertising">section 9</a>)</td></tr>
+        <tr><td>ML Kit diagnostic data</td><td>When the barcode scanner is used</td><td>Yes, to Google (see <a href="#third-party">section 10</a>)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Android permissions requested by the app: <span class="pill">Camera</span> (live scanning) and <span class="pill">Vibrate</span> (optional scan feedback). Internet, network-state, advertising-ID and Android ad-services permissions are added by the Google Mobile Ads SDK for advertising. Easy QR does not request access to your contacts, location, microphone, files or photo library.</p>
+  </section>
+
+  <section id="camera" aria-labelledby="h-camera">
+    <h2 id="h-camera">4. Camera permission and QR/barcode scanning</h2>
+    <ul>
+      <li>The camera is used only to detect QR codes and barcodes. Scanning starts automatically on the Scan screen; there is no photo capture.</li>
+      <li>Camera frames are analysed in memory by Google ML Kit's barcode model, which is bundled inside the app and runs on your device. Frames are not saved and are not sent anywhere by Easy QR.</li>
+      <li>The camera is released when you leave the Scan screen. The flashlight and zoom controls only change camera settings.</li>
+      <li>You can refuse or revoke camera access at any time in Android Settings. You can still scan from a photo and create codes without it.</li>
+    </ul>
+  </section>
+
+  <section id="gallery" aria-labelledby="h-gallery">
+    <h2 id="h-gallery">5. Gallery image access</h2>
+    <p>"Scan from photo" uses the Android system photo picker. Easy QR only receives the single image you select; it does not request permission to read your photo library. The image is decoded and scanned in memory on your device, then discarded. It is not copied, stored or uploaded.</p>
+  </section>
+
+  <section id="history" aria-labelledby="h-history">
+    <h2 id="h-history">6. Local scan and generation history</h2>
+    <p>When <strong>Save history</strong> is on (the default), Easy QR stores each scanned or created code in a database inside the app's private storage on your device. An entry contains the code content, its format and type (for example "Website" or "EAN-13"), a short title, the date and time, and whether it was scanned or generated.</p>
+    <p>History is never uploaded by Easy QR. You can search it, delete individual entries, clear all history, or turn off <strong>Save history</strong> in Settings so new codes are not recorded.</p>
+  </section>
+
+  <section id="wifi" aria-labelledby="h-wifi">
+    <h2 id="h-wifi">7. Wi-Fi QR generation and password handling</h2>
+    <ul>
+      <li>Wi-Fi QR codes are created only from the network name, password and security type that <em>you type in</em>. Easy QR does not read the Wi-Fi networks or passwords saved on your device.</li>
+      <li>By default, Wi-Fi passwords are <strong>removed before an entry is saved to history</strong>. They are kept only if you turn on <strong>Save Wi-Fi passwords</strong> in Settings.</li>
+      <li>When you scan a Wi-Fi code, "Connect to network" opens Android's own add-network dialog (Android 11 and later), where you decide whether to save the network.</li>
+      <li>On Android 13 and later, copied Wi-Fi passwords are marked as sensitive so the system's clipboard preview hides them.</li>
+    </ul>
+  </section>
+
+  <section id="exports" aria-labelledby="h-exports">
+    <h2 id="h-exports">8. Generated QR codes and exported files</h2>
+    <ul>
+      <li>Codes are generated on your device.</li>
+      <li><strong>Save PNG</strong> opens the Android document picker. The image is written only to the location you choose and is then under your control.</li>
+      <li><strong>Share</strong> creates a temporary image in the app's cache (replaced the next time you share) and hands it to the app you pick in the Android share sheet. Once shared, the receiving app's own privacy practices apply.</li>
+      <li><strong>Copy</strong> places the content on the Android clipboard, where other apps you use may be able to read it.</li>
+    </ul>
+  </section>
+
+  <section id="advertising" aria-labelledby="h-advertising">
+    <h2 id="h-advertising">9. Advertising and Google AdMob</h2>
+    <p>Easy QR is free and shows ads (banners and occasional full-screen ads) provided by <strong>Google AdMob</strong> through the Google Mobile Ads SDK. To request, show and measure ads and to prevent fraud, Google may automatically collect information from your device, including:</p>
+    <ul>
+      <li><strong>IP address</strong>, which may be used to estimate your general location;</li>
+      <li><strong>app interaction information</strong>, such as app launches, taps and ad views;</li>
+      <li><strong>diagnostic information</strong>, such as app performance and ad-loading data;</li>
+      <li><strong>device and advertising identifiers</strong>, such as the Android advertising ID and app set ID, and, on supported devices, Android Privacy Sandbox signals (for example Topics and attribution), depending on your device settings and consent choices.</li>
+    </ul>
+    <p>Depending on your choices and location, ads may be personalised or non-personalised. Easy QR does not send the content of your scans, created codes or history to Google or any advertiser. Google's use of this information is governed by the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a>.</p>
+  </section>
+
+  <section id="third-party" aria-labelledby="h-third-party">
+    <h2 id="h-third-party">10. Information collected by third-party SDKs</h2>
+    <h3>Google Mobile Ads SDK and User Messaging Platform (Google)</h3>
+    <p>As described in <a href="#advertising">section 9</a>, plus your consent choices where a consent form is required. See Google's <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener">Mobile Ads SDK data disclosure</a>.</p>
+    <h3>Google ML Kit barcode scanning</h3>
+    <p>The barcode model runs on your device. According to Google, ML Kit may send diagnostic and usage information, such as device model and OS version, app package name and version, performance metrics, API configuration, error codes and a per-installation identifier that is not intended to identify you, to Google over HTTPS. Google states that it does not share this data with third parties. See Google's <a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">ML Kit data disclosure</a>.</p>
+    <p>Easy QR does not include any other analytics, crash-reporting or tracking SDKs.</p>
+  </section>
+
+  <section id="consent" aria-labelledby="h-consent">
+    <h2 id="h-consent">11. Consent management and advertising preferences</h2>
+    <ul>
+      <li>Where required by law (for example in the European Economic Area, the United Kingdom and Switzerland), Easy QR uses Google's User Messaging Platform to ask for your consent before ads are requested. Ads are only requested once your choice permits it.</li>
+      <li>When it applies to you, <strong>Settings → Ad privacy options</strong> lets you review or change your choice at any time.</li>
+      <li>You can reset or delete your advertising ID and limit ad personalisation in Android Settings (Privacy → Ads, or Google → Ads, depending on your device).</li>
+      <li>You can manage Google ad personalisation at <a href="https://myadcenter.google.com/" rel="noopener">My Ad Center</a>.</li>
+    </ul>
+  </section>
+
+  <section id="storage" aria-labelledby="h-storage">
+    <h2 id="h-storage">12. Data storage and security</h2>
+    <ul>
+      <li>History and settings are stored in Easy QR's private app storage, which Android isolates from other apps. Easy QR does not add its own encryption to this data. Anyone with access to your unlocked device can open the app and see your history.</li>
+      <li>Easy QR allows Android's standard app backup. Depending on your device and backup settings, your history and settings may be included in your device or Google account backup and restored to a new device.</li>
+      <li>Easy QR itself does not transmit your history or code content. Data collected by Google SDKs is sent to Google, which states that it is encrypted in transit.</li>
+      <li>No method of storage or transmission is completely secure, and we cannot guarantee absolute security.</li>
+    </ul>
+  </section>
+
+  <section id="retention" aria-labelledby="h-retention">
+    <h2 id="h-retention">13. Data retention and deletion</h2>
+    <ul>
+      <li>History entries remain on your device until you delete them, clear history, clear the app's storage in Android Settings, or uninstall the app.</li>
+      <li>To delete: open <strong>History</strong> and long-press an entry → <strong>Delete</strong>; or use the bin icon on the History screen or <strong>Settings → Clear all history</strong>.</li>
+      <li>Files you saved or shared are outside Easy QR and must be deleted where you saved or sent them.</li>
+      <li>The developer holds no copy of your data and therefore cannot retrieve or delete it on your behalf. Data collected by Google is retained according to Google's policies.</li>
+    </ul>
+  </section>
+
+  <section id="children" aria-labelledby="h-children">
+    <h2 id="h-children">14. Children's privacy</h2>
+    <p>Easy QR is a general-audience utility and is not directed at children under 13 (or the minimum age required in their country). Ads in the app are not configured for child-directed treatment. We do not knowingly collect personal information from children. If you believe a child has used the app in a way that concerns you, please contact us.</p>
+    <p class="note"><strong>Owner review:</strong> confirm this matches the target audience and age ratings declared in the Google Play Console.</p>
+  </section>
+
+  <section id="links" aria-labelledby="h-links">
+    <h2 id="h-links">15. External links and third-party services</h2>
+    <p>Scanned codes may contain web addresses, email addresses, phone numbers, map locations or contact details. Easy QR never opens them automatically. It shows the content first, and only opens a browser, email, dialer, maps or contacts app when you choose an action. Those websites and apps are operated by third parties and have their own privacy policies, and Easy QR has no control over them. Review links before opening them.</p>
+  </section>
+
+  <section id="changes" aria-labelledby="h-changes">
+    <h2 id="h-changes">16. Changes to this Privacy Policy</h2>
+    <p>We may update this policy when the app or applicable law changes. The updated version will be published at the same address with a new effective date and, for significant changes, highlighted in the app or its store listing.</p>
+  </section>
+
+  <section id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">17. Contact information</h2>
+    <p>Muhammad Asher Ansari<br>Email: <a href="mailto:asheransar@gmail.com">asheransar@gmail.com</a></p>
+  </section>
+
+  <section id="effective" aria-labelledby="h-effective">
+    <h2 id="h-effective">18. Effective date</h2>
+    <p>This Privacy Policy is effective as of <strong>28-Oct-2026</strong>.</p>
+  </section>
+</main>
+<footer>
+  <p>Easy QR: Scanner &amp; Generator · <a href="terms-and-conditions.html">Terms &amp; Conditions</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<!--
+  terms-and-conditions.html — Easy QR: Scanner & Generator terms and conditions.
+  Self-contained static page (no external CSS/JS) for public HTTPS hosting and for the
+  in-app viewer (bundled as an Android asset). Light/dark follow the system theme.
+  Describes only features that exist in the app. Items in [BRACKETS] and "Owner review"
+  notes must be completed by the owner (with legal advice where needed) before publishing.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Terms &amp; Conditions – Easy QR: Scanner &amp; Generator</title>
+<meta name="description" content="Terms and conditions for using Easy QR: Scanner & Generator.">
+<style>
+  :root {
+    --bg: #F5F7FA; --surface: #FFFFFF; --surface-alt: #E9F0F7; --text: #14212D;
+    --secondary: #526371; --outline: #CFD9E2; --accent: #245ED8; --on-accent: #FFFFFF;
+    --note-bg: #FFF6DA; --note-border: #E3C46B;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B1118; --surface: #151F29; --surface-alt: #1B2934; --text: #F4F7F9;
+      --secondary: #A3B0B9; --outline: #33434E; --accent: #C7FA60; --on-accent: #0B1118;
+      --note-bg: #2A2A16; --note-border: #6B6327;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
+  header.brand {
+    max-width: 760px; margin: 0 auto; padding: 32px 20px 8px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  header.brand svg { width: 48px; height: 48px; border-radius: 12px; flex: none; }
+  .wordmark { font-weight: 700; letter-spacing: .32em; font-size: 14px; }
+  .app { color: var(--secondary); font-size: 14px; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 20px 48px; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.4rem); line-height: 1.2; margin: 16px 0 6px; }
+  .meta { color: var(--secondary); margin: 0 0 24px; }
+  nav.toc, section {
+    background: var(--surface); border: 1px solid var(--outline); border-radius: 16px;
+    padding: 20px 22px; margin: 0 0 16px;
+  }
+  nav.toc h2 { margin-top: 0; }
+  nav.toc ol { margin: 0; padding-left: 1.3em; columns: 2 16rem; column-gap: 2rem; }
+  nav.toc li { break-inside: avoid; margin: 2px 0; }
+  h2 { font-size: 1.3rem; line-height: 1.3; margin: 0 0 10px; }
+  h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 1.3em; }
+  li { margin: 4px 0; }
+  .note {
+    background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 12px;
+    padding: 12px 14px; margin: 0 0 16px;
+  }
+  .pill { display: inline-block; background: var(--surface-alt); border-radius: 999px; padding: 1px 10px; font-size: .9em; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-top: 1px solid var(--outline); }
+  th { color: var(--secondary); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 20px 40px; color: var(--secondary); font-size: .9rem; }
+  @media (max-width: 480px) { nav.toc, section { padding: 16px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="brand">
+  <!-- Easy QR app icon (handoff/assets/graphics/app-icon.svg) -->
+  <svg viewBox="0 0 432 432" role="img" aria-label="Easy QR logo">
+    <rect width="432" height="432" fill="#0B1118"/>
+    <g fill="none" stroke="#C7FA60" stroke-width="28" stroke-linecap="round">
+      <path d="M110 182v-44q0-28 28-28h44 M250 110h44q28 0 28 28v44 M110 250v44q0 28 28 28h44 M250 322h44q28 0 28-28v-44"/>
+    </g>
+    <rect x="185" y="185" width="62" height="62" rx="16" fill="#C7FA60"/>
+  </svg>
+  <div>
+    <div class="wordmark">EASY QR</div>
+    <div class="app">Easy QR: Scanner &amp; Generator</div>
+  </div>
+</header>
+
+<main id="content">
+  <h1>Terms &amp; Conditions</h1>
+  <p class="meta">Effective date: 28-Oct-2026</p>
+
+  <nav class="toc" aria-labelledby="toc-title">
+    <h2 id="toc-title">Contents</h2>
+    <ol>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#description">Description of Easy QR</a></li>
+      <li><a href="#use">Permitted use</a></li>
+      <li><a href="#responsibilities">User responsibilities</a></li>
+      <li><a href="#content">QR code and barcode content</a></li>
+      <li><a href="#external">Third-party links and external destinations</a></li>
+      <li><a href="#accuracy">Accuracy and reliability of scanning</a></li>
+      <li><a href="#ads">Advertisements and third-party services</a></li>
+      <li><a href="#ip">Intellectual property</a></li>
+      <li><a href="#availability">Service availability</a></li>
+      <li><a href="#warranty">Disclaimer of warranties</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#app-changes">Changes to the application</a></li>
+      <li><a href="#terms-changes">Changes to the Terms</a></li>
+      <li><a href="#law">Applicable law</a></li>
+      <li><a href="#contact">Contact information</a></li>
+      <li><a href="#effective">Effective date</a></li>
+    </ol>
+  </nav>
+
+  <section id="introduction" aria-labelledby="h-introduction">
+    <h2 id="h-introduction">1. Introduction</h2>
+    <p>These Terms &amp; Conditions ("Terms") govern your use of the Android app <strong>Easy QR: Scanner &amp; Generator</strong> ("Easy QR", "the app"), provided by <strong>Muhammad Asher Ansari</strong> ("we", "us"). Please read them together with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <section id="acceptance" aria-labelledby="h-acceptance">
+    <h2 id="h-acceptance">2. Acceptance of Terms</h2>
+    <p>By downloading, installing or using Easy QR you agree to these Terms. If you do not agree, do not use the app and uninstall it. Your use of the app is also subject to the Google Play Terms of Service.</p>
+  </section>
+
+  <section id="description" aria-labelledby="h-description">
+    <h2 id="h-description">3. Description of Easy QR</h2>
+    <p>Easy QR is a free app that lets you:</p>
+    <ul>
+      <li>scan QR codes and supported barcodes (QR, Aztec, Data Matrix, PDF417, EAN-13, EAN-8, UPC-A, UPC-E, Code 128, Code 39, Code 93, ITF, Codabar) with the camera or from a photo;</li>
+      <li>create QR codes for websites, text, Wi-Fi networks, contacts and email, and Code 128, EAN-13, EAN-8, UPC-A and Code 39 barcodes;</li>
+      <li>keep an optional history on your device, and save, share or copy codes and their content.</li>
+    </ul>
+    <p>Easy QR has no accounts, subscriptions or in-app purchases. Scanning and code creation work offline. The app is supported by advertising.</p>
+  </section>
+
+  <section id="use" aria-labelledby="h-use">
+    <h2 id="h-use">4. Permitted use</h2>
+    <p>We grant you a personal, non-exclusive, non-transferable, revocable licence to install and use Easy QR on devices you own or control, for lawful personal or business purposes, in accordance with these Terms. You must not:</p>
+    <ul>
+      <li>use the app to create or distribute codes that lead to malware, phishing, fraud or other unlawful content;</li>
+      <li>use the app to infringe others' rights, including privacy and intellectual-property rights;</li>
+      <li>copy, modify, decompile or reverse-engineer the app except where the law expressly permits it;</li>
+      <li>interfere with, manipulate or generate fraudulent interactions with the advertisements shown in the app.</li>
+    </ul>
+  </section>
+
+  <section id="responsibilities" aria-labelledby="h-responsibilities">
+    <h2 id="h-responsibilities">5. User responsibilities</h2>
+    <ul>
+      <li>You are responsible for the content you encode, save and share, and for having the right to share it (for example a Wi-Fi password or someone's contact details).</li>
+      <li>You are responsible for checking a scanned result before acting on it, and for keeping your device secure.</li>
+      <li>Barcodes you create (for example EAN or UPC) are only images of the numbers you enter. Easy QR does not issue or register official GS1 product numbers.</li>
+    </ul>
+  </section>
+
+  <section id="content" aria-labelledby="h-content">
+    <h2 id="h-content">6. QR code and barcode content</h2>
+    <p>Codes you scan come from third parties, and their content is not created, checked or endorsed by us. A code can contain any text, including misleading or malicious links, contact details or Wi-Fi settings. Easy QR displays the decoded content and suggests actions based on its type, but it does not verify the content's safety, accuracy or origin.</p>
+  </section>
+
+  <section id="external" aria-labelledby="h-external">
+    <h2 id="h-external">7. Third-party links and external destinations</h2>
+    <p>Scanned codes may lead to external websites, apps or services (for example a browser, email, phone, SMS, maps or contacts app). Easy QR never opens these automatically; they open only when you choose an action. We do not control external destinations and are not responsible for their content, availability, security or privacy practices. Treat scanned links with the same caution as links from unknown senders, and do not treat scanner results as trustworthy just because they were scanned.</p>
+  </section>
+
+  <section id="accuracy" aria-labelledby="h-accuracy">
+    <h2 id="h-accuracy">8. Accuracy and reliability of scanning</h2>
+    <p>Recognition depends on lighting, focus, print quality, damage and the camera. Easy QR may fail to detect a code or, rarely, misread one. Check-digit indicators for product barcodes are informational only. Always confirm important information (for example prices, payment details, addresses or Wi-Fi credentials) through another source before relying on it.</p>
+  </section>
+
+  <section id="ads" aria-labelledby="h-ads">
+    <h2 id="h-ads">9. Advertisements and third-party services</h2>
+    <p>Easy QR displays third-party advertisements provided by Google AdMob, including banners and occasional full-screen ads. Ads are provided by third parties, and we do not endorse the advertised products or services. Your dealings with advertisers are solely between you and them. Advertising, consent choices and related data processing are described in the <a href="privacy-policy.html">Privacy Policy</a>. The app also uses Google ML Kit for on-device barcode recognition. Third-party services are subject to their providers' terms.</p>
+  </section>
+
+  <section id="ip" aria-labelledby="h-ip">
+    <h2 id="h-ip">10. Intellectual property</h2>
+    <p>Easy QR, including its design, graphics, icons and code, is owned by Muhammad Asher Ansari or its licensors and is protected by applicable laws. These Terms do not transfer ownership to you. Content you create with the app remains yours, subject to any third-party rights in that content. "QR Code" is a registered trademark of DENSO WAVE INCORPORATED. Other trademarks belong to their respective owners.</p>
+  </section>
+
+  <section id="availability" aria-labelledby="h-availability">
+    <h2 id="h-availability">11. Service availability</h2>
+    <p>The app's core functions run on your device. We may update, change, suspend or discontinue the app or any feature, and it may not be available on every device or Android version. Advertising, and features that open other apps, depend on third-party services that we do not control.</p>
+  </section>
+
+  <section id="warranty" aria-labelledby="h-warranty">
+    <h2 id="h-warranty">12. Disclaimer of warranties</h2>
+    <p>To the extent permitted by applicable law, Easy QR is provided "as is" and "as available", without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, accuracy and non-infringement. We do not warrant that the app will be error-free or uninterrupted, or that scan results will be accurate or safe. Some jurisdictions do not allow certain exclusions, so parts of this section may not apply to you. Nothing in these Terms limits rights you have under mandatory consumer-protection law.</p>
+  </section>
+
+  <section id="liability" aria-labelledby="h-liability">
+    <h2 id="h-liability">13. Limitation of liability</h2>
+    <p>To the extent permitted by applicable law, we are not liable for any indirect, incidental, special, consequential or punitive damages, or for loss of data, profits or goodwill, arising from your use of, or inability to use, the app, including actions you take based on scanned content or visits to external destinations. Because the app is provided free of charge, our total liability for any claim relating to the app is limited to the maximum extent permitted by law. Nothing in these Terms excludes liability that cannot be excluded by law.</p>
+  </section>
+
+  <section id="app-changes" aria-labelledby="h-app-changes">
+    <h2 id="h-app-changes">14. Changes to the application</h2>
+    <p>We may release updates that add, change or remove features, or that are required for security, legal or platform reasons. Some updates may be needed to keep using the app.</p>
+  </section>
+
+  <section id="terms-changes" aria-labelledby="h-terms-changes">
+    <h2 id="h-terms-changes">15. Changes to the Terms</h2>
+    <p>We may revise these Terms. The updated Terms will be published at the same address with a new effective date. If you keep using the app after changes take effect, you accept the revised Terms.</p>
+  </section>
+  
+  <section id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">17. Contact information</h2>
+    <p>Muhammad Asher Ansari<br>Email: <a href="mailto:asheransar@gmail.com">asheransar@gmail.com</a></p>
+  </section>
+
+  <section id="effective" aria-labelledby="h-effective">
+    <h2 id="h-effective">18. Effective date</h2>
+    <p>These Terms are effective as of <strong>28-Oct-2026</strong>.</p>
+  </section>
+</main>
+<footer>
+  <p>Easy QR: Scanner &amp; Generator · <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+</body>
+</html>
